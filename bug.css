@@ -1,0 +1,8 @@
+The following CSS code causes unexpected behavior in some browsers due to the use of an invalid selector:
+
+```css
+.container > * { /*This selector targets all direct children of an element with class 'container'*/
+  color: blue;
+}
+```
+This code might be problematic because the wildcard selector `*` is too broad and can lead to unintended consequences when other elements are added to the `.container` that should not have the `color:blue` style applied.
